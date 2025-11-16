@@ -764,7 +764,7 @@ export default function Home() {
                                             hide
                                           />
                                           <Tooltip
-                                            content={({ active, payload }) => {
+                                            content={({ active, payload }: any) => {
                                               if (active && payload && payload.length) {
                                                 const data = payload[0].payload;
                                                 if (data.statValue === 0) return null;
@@ -790,7 +790,7 @@ export default function Home() {
                                               dataKey="label"
                                               position="top"
                                               style={{ fill: '#000', fontSize: '9px', fontWeight: 'bold' }}
-                                              content={({ value, payload }) => {
+                                              content={({ value, payload }: any) => {
                                                 if (payload && payload.statValue === 0) return null;
                                                 return <text x={0} y={0} dy={-4} textAnchor="middle" fill="#000" fontSize="9px" fontWeight="bold">{value}</text>;
                                               }}
